@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Mountain Studios</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/6c4d820d68.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="text-[#1f2122]">
+    <header class="sticky top-0 bg-white z-50">
+      <nav class="block lg:hidden max-w-screen-2xl w-full mx-auto z-50">
+        <div class="flex justify-between items-center px-8 py-2">
+          <div class="max-w-16 block sm:hidden">
+            <a href="/"><img src="./images/logo.png" alt="logo" /></a>
+          </div>
+          <div class="max-w-64 hidden sm:block">
+            <a href="/"><img src="./images/logo_side_text.png" alt="logo" /></a>
+          </div>
+          <button
+            id="bars"
+            onclick="toggle()"
+            class="hover:text-[#0099ff] transition-all"
+          >
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <div
+          class="hidden bg-white fixed top-22 w-screen shadow-lg py-8 transition-all"
+          id="nav"
+        >
+          <ul
+            class="flex flex-col items-center gap-8 font-semibold justify-center w-full"
+          >
+            <li>
+              <a
+                href="#about"
+                class="hover:text-[#0099ff] transition-all"
+                onclick="toggle()"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#portfolio"
+                class="hover:text-[#0099ff] transition-all"
+                onclick="toggle()"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="hover:text-[#0099ff] transition-all"
+                onclick="toggle()"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                class="hover:text-[#0099ff] transition-all"
+                onclick="toggle()"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="documentation.html"
+                onclick="toggle()"
+                class="hover:text-[#0099ff] transition-all"
+                >Documentation</a
+              >
+            </li>
+            <li>
+              <a href="#contact" onclick="toggle()">
+                <button
+                  class="bg-[#0099ff] uppercase font-bold rounded-md text-white py-3 px-6 tracking-widest hover:shadow-lg hover:shadow-blue-200 transition-all"
+                >
+                  Contact Us
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav
+        class="justify-between items-center px-8 max-w-screen-2xl w-full mx-auto z-50 hidden lg:flex py-2"
+      >
+        <div class="max-w-64">
+          <a href="/"><img src="./images/logo_side_text.png" alt="logo" /></a>
+        </div>
+        <ul
+          class="lg:flex justify-between items-center gap-8 font-semibold hidden"
+        >
+          <li>
+            <a href="#about" class="hover:text-[#0099ff] transition-all"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio" class="hover:text-[#0099ff] transition-all"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#services" class="hover:text-[#0099ff] transition-all"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#pricing" class="hover:text-[#0099ff] transition-all"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="documentation.html"
+              class="hover:text-[#0099ff] transition-all"
+              >Documentation</a
+            >
+          </li>
+          <li>
+            <a href="#contact">
+              <button
+                class="bg-[#0099ff] uppercase font-bold rounded-md text-white py-3 px-6 tracking-widest hover:shadow-lg hover:shadow-blue-200 transition-all"
+              >
+                Contact Us
+              </button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div
+        id="hero"
+        class="mt-12 bg-[url('./images/hero_background.png')] bg-cover bg-top pb-[18vw]"
+      >
+        <div class="z-40 w-full grid place-content-center md:px-0 px-8 my-auto">
+          <h1 class="md:text-6xl text-5xl font-bold text-center mb-12">
+            Build Your
+            <span class="text-[#0099ff]">Dream</span>
+            Site Now
+          </h1>
+          <p class="text-center max-w-xl w-full mx-auto">
+            Elevate your online presence with Web Mountain Studios. Crafting
+            bespoke web solutions for a standout digital experience.
+            Pixel-perfect design meets cutting-edge technology. Redefine your
+            online journey with us
+          </p>
+          <iframe
+            class="md:w-3/4 w-full aspect-video mx-auto my-12 rounded-lg"
+            src="https://www.youtube.com/embed/APOssn6G7JI?si=KmTedrREroaWQc3k"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <a href="#contact" class="mx-auto">
+            <button
+              class="bg-[#0099ff] uppercase font-bold rounded-md text-white py-4 px-8 w-64 tracking-widest hover:shadow-lg hover:shadow-blue-200 transition-all z-20"
+            >
+              Contact Us
+            </button>
+          </a>
+        </div>
+        <img
+          src="./images//portfolio_background_top.png"
+          alt=""
+          class="w-full absolute z-10"
+        />
+      </div>
+      <div id="portfolio" class="bg-[#1f2122] md:pb-[14vw] pb-[13vw]">
+        <div
+          class="z-20 text-white pt-32 pb-16 lg:grid grid-cols-5 max-w-[1400px] w-full mx-auto gap-32 place-content-center px-8 flex flex-col"
+        >
+          <div class="col-span-2 my-auto">
+            <div>
+              <h3 class="uppercase text-[#0099ff] tracking-widest font-bold">
+                Portfolio
+              </h3>
+              <h2 class="text-white text-3xl font-bold">Recent Work</h2>
+              <hr class="border-[#0099ff] border-2 w-20 mt-2" />
+            </div>
+            <p class="my-8 leading-7">
+              At Web Mountain Studios, our recent projects exemplify our
+              dedication to excellence and client satisfaction. From concept to
+              execution, we pour our passion and hard work into every endeavor.
+              Our collaborative approach ensures that each client's unique
+              vision is not only realized but exceeded.
+            </p>
+            <p class="leading-7">
+              Explore our recent portfolio to witness the seamless synergy of
+              cutting-edge technology and captivating design. Behind every
+              pixel-perfect website lies a story of dedication, where our small
+              but mighty team of developers and sales professionals invests time
+              and effort to deliver fast, efficient, and top-tier web solutions.
+            </p>
+          </div>
+          <div
+            class="grid md:grid-cols-2 md:grid-rows-2 gap-8 col-span-3 mx-auto"
+          >
+            <img
+              src="./images/Dark Website.png"
+              alt="gallery image"
+              class="rounded-md hover:shadow-xl hover:shadow-[#0099ff] hover:scale-105 transition-all"
+            />
+            <img
+              src="./images/TPB.png"
+              alt="gallery image"
+              class="rounded-md hover:shadow-xl hover:shadow-[#0099ff] hover:scale-105 transition-all"
+            />
+            <img
+              src="./images/Matt Lawrence.png"
+              alt="gallery image"
+              class="rounded-md hover:shadow-xl hover:shadow-[#0099ff] hover:scale-105 transition-all"
+            />
+            <img
+              src="./images/Light Website.png"
+              alt="gallery image"
+              class="rounded-md hover:shadow-xl hover:shadow-[#0099ff] hover:scale-105 transition-all"
+            />
+          </div>
+        </div>
+        <img
+          src="./images/about_background_top.png"
+          alt=""
+          class="w-full absolute z-10"
+        />
+      </div>
+      <div id="about">
+        <div
+          class="z-20 text-[#1f2122] md:pt-12 pt-6 md:pb-44 pb-32 md:grid md:grid-cols-2 max-w-[1200px] w-full mx-auto gap-32 place-content-center px-8 flex flex-col-reverse"
+        >
+          <div
+            class="grid grid-cols-2 grid-rows-2 pt-16 gap-8 place-content-center max-w-sm w-full mx-auto"
+          >
+            <img
+              src="./images/webflow_logo.png"
+              alt="gallery image"
+              class="rounded-md w-full mx-auto my-auto"
+            />
+            <div></div>
+            <div></div>
+            <img
+              src="./images/figma_logo.png"
+              alt="gallery image"
+              class="rounded-md w-9/12 mx-auto my-auto"
+            />
+          </div>
+          <div class="pt-32 my-auto">
+            <div>
+              <h3 class="uppercase text-[#0099ff] tracking-widest font-bold">
+                About
+              </h3>
+              <h2 class="text-3xl font-bold">What We Do</h2>
+              <hr class="border-[#0099ff] border-2 w-20 mt-2" />
+            </div>
+            <p class="my-8 leading-7">
+              At Web Mountain Studios, we are a dynamic online venture powered
+              by a tight-knit team of skilled developers and sales
+              professionals. Specializing in swift, efficient, and high-quality
+              web solutions, we leverage the power of Webflow for seamless
+              development and Figma for impeccable design.
+            </p>
+            <p class="leading-7">
+              Our commitment to excellence is reflected in every website we
+              craft. With a focus on speed, efficiency, and unwavering quality,
+              we bring your digital vision to life. Trust us to elevate your
+              online presence, where innovation meets efficiency, and where
+              every pixel tells a compelling story
+            </p>
+            <a href="#contact">
+              <button
+                class="bg-[#1f2122] uppercase font-bold rounded-md text-white py-3 px-6 tracking-widest hover:shadow-lg hover:shadow-blue-200 transition-all mt-16"
+              >
+                Contact Us
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="stats" class="bg-[#0099ff] py-16">
+        <div
+          class="max-w-[1000px] mx-auto flex md:justify-between justify-center gap-16 flex-col lg:flex-row items-center"
+        >
+          <div class="text-center font-bold">
+            <h3 class="text-6xl text-white mb-2">100%</h3>
+            <h4 class="text-2xl leading-6">
+              Customer Satisfaction <br />
+              With our Services
+            </h4>
+          </div>
+          <div class="text-center font-bold">
+            <h3 class="text-6xl text-white mb-2">2 weeks</h3>
+            <h4 class="text-2xl leading-6">
+              An Average to Build <br />
+              a Custome Website
+            </h4>
+          </div>
+          <div class="text-center font-bold">
+            <h3 class="text-6xl text-white mb-2">100%</h3>
+            <h4 class="text-2xl leading-6">
+              Custom and Personalized <br />
+              Websites
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div id="more" class="mt-24 pb-24 bg-white">
+        <div
+          class="z-20 pt-32 pb-16 lg:grid grid-cols-5 max-w-[1400px] w-full mx-auto gap-32 place-content-center px-8 flex flex-col"
+        >
+          <div class="col-span-2 my-auto">
+            <div>
+              <h3 class="uppercase text-[#0099ff] tracking-widest font-bold">
+                More
+              </h3>
+              <h2 class="text-3xl font-bold">Check Us Out</h2>
+              <hr class="border-[#0099ff] border-2 w-20 mt-2" />
+            </div>
+            <p class="my-8 leading-7">
+              Hot off the press! Web Mountain Studios steals the spotlight in
+              your local paper. Explore our game-changing web design – from
+              captivating layouts to seamless functionality. Your story deserves
+              to shine, and with us, it takes center stage. Grab a copy, dive
+              in, and let's elevate your online presence!
+            </p>
+            <p class="leading-7">
+              Hear the digital revolution on air! Web Mountain Studios, our name
+              echoing through the radio waves. Unleash your online potential
+              with us – expert web design that speaks volumes. Tune in now, and
+              let the sounds of success resonate. Web Mountain Studios, where
+              your vision meets the airwaves, turning ideas into impact!"
+            </p>
+          </div>
+          <div class="flex justify-between col-span-3 h-[400px] lg:h-[600px]">
+            <div class="my-auto">
+              <button
+                onclick="carousel()"
+                class="bg-[#0099ff] text-white rounded-full h-8 w-8 hover:scale-110 transition-all hover:shadow-lg hover:shadow-[#dafbff]"
+              >
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+            </div>
+            <div class="my-auto px-4 hidden item">
+              <iframe
+                width="100%"
+                height="300"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1746300231&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              ></iframe>
+              <div
+                style="
+                  font-size: 10px;
+                  color: #cccccc;
+                  line-break: anywhere;
+                  word-break: normal;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                    Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+                  font-weight: 100;
+                "
+              >
+                <a
+                  href="https://soundcloud.com/luka-vilago-412475112"
+                  title="Luka Vilagoš"
+                  target="_blank"
+                  style="color: #cccccc; text-decoration: none"
+                  >Luka Vilagoš</a
+                >
+                ·
+                <a
+                  href="https://soundcloud.com/luka-vilago-412475112/web-mountain-studios-reklama"
+                  title="Web Mountain Studios - Reklama"
+                  target="_blank"
+                  style="color: #cccccc; text-decoration: none"
+                  >Web Mountain Studios - Reklama</a
+                >
+              </div>
+            </div>
+            <div
+              class="my-auto w-full max-w-md px-4 item hover:scale-125 transition-all"
+            >
+              <img src="./images/novine-stranica001.webp" alt="novine" />
+            </div>
+            <div class="my-auto">
+              <button
+                onclick="carousel()"
+                class="bg-[#0099ff] text-white rounded-full h-8 w-8 hover:scale-110 hover:shadow-lg hover:shadow-[#dafbff] transition-all"
+              >
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="services" class="mt-24 pb-24 bg-[#dafbff]">
+        <div class="absoulte bg-white h-[350px]"></div>
+        <div class="mt-[-350px]">
+          <div class="text-center">
+            <h3 class="uppercase text-[#0099ff] tracking-widest font-bold">
+              Services
+            </h3>
+            <h2 class="text-3xl font-bold text-center">How We Help you</h2>
+            <hr class="border-[#0099ff] border-2 w-20 mt-2 mx-auto" />
+          </div>
+          <div
+            class="max-w-[1000px] mx-auto mt-8 grid grid-rows-2 md:grid-rows-1 place-content-center bg-white rounded-2xl py-24 px-12 shadow-lg shadow-[#0099ff] md:grid-cols-7 gap-24"
+          >
+            <div class="md:col-span-3">
+              <div class="mb-16">
+                <h3 class="uppercase font-bold text-3xl mb-4">
+                  Creating Websites
+                </h3>
+                <p>
+                  A professional website is essential for gaining new customers.
+                </p>
+              </div>
+              <div class="mb-16">
+                <h3 class="uppercase font-bold text-3xl mb-4">
+                  Creating Webshops
+                </h3>
+                <p>
+                  A web shop that is well-built and user-friendly will bring in
+                  more customers.
+                </p>
+              </div>
+              <div class="mb-16">
+                <h3 class="uppercase font-bold text-3xl mb-4">
+                  Updating Websites
+                </h3>
+                <p>
+                  Keep your customers engaged and updated with a website that is
+                  always fresh and relevant.
+                </p>
+              </div>
+              <div class="mb-16">
+                <h3 class="uppercase font-bold text-3xl mb-4">
+                  Upkeeping Websites
+                </h3>
+                <p>
+                  Keep your websites and websops up to date for a small monthly
+                  fee.
+                </p>
+              </div>
+              <a href="#contact">
+                <button
+                  class="bg-[#0099ff] uppercase font-bold rounded-md text-white py-3 px-6 tracking-widest hover:shadow-lg hover:shadow-blue-200 transition-all"
+                >
+                  Contact Us
+                </button>
+              </a>
+            </div>
+            <div class="md:col-span-4 grid-rows-8 grid">
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-[#0099ff] text-xl">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-[#0099ff] text-xl">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  User-friendly navigation and design that enhance user
+                  satisfaction and engagement
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-[#0099ff] text-xl">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Responsive design that adapts to any device and screen size
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-[#0099ff] text-xl">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  High-quality and persuasive website copy that attracts and
+                  converts leads
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-[#0099ff] text-xl">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  SEO-friendly designs and copy that boost your online
+                  visibility and ranking
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-[#0099ff] text-xl">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Ecommerce features that enable you to sell your products or
+                  services online
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-[#0099ff] text-xl">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  New website page creation that expands your web presence and
+                  content
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-[#0099ff] text-xl">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Comprehensive call, lead, customer journey, and revenue
+                  tracking and analysis
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="max-w-[800px] flex justify-center items-center mx-auto mt-24 px-8"
+          >
+            <p class="text-center font-bold">
+              With our comprehensive and diverse range of services, we have the
+              expertise and the resources to design and develop the perfect
+              website that meets your specific requirements and expectations.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="pricing" class="pt-24 bg-gradient-to-b from-[#dafbff] to-white">
+        <div class="text-center">
+          <h3 class="uppercase text-[#0099ff] tracking-widest font-bold">
+            Pricing
+          </h3>
+          <h2 class="text-3xl font-bold text-center">
+            Fair and Competitive Pricing
+          </h2>
+          <hr class="border-[#0099ff] border-2 w-20 mt-2 mx-auto" />
+        </div>
+        <div
+          class="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-20 max-w-[1400px] mx-auto py-24 px-8"
+        >
+          <div
+            class="bg-white rounded-3xl px-12 py-16 grid place-content-center shadow-lg shadow-[#0099ff] max-w-[450px] mx-auto"
+          >
+            <div class="text-center text-[#313576]">
+              <h4 class="uppercase font-bold">Single page site</h4>
+              <div>
+                <h3>
+                  <span class="font-bold text-6xl">$750 </span
+                  ><span>one-time</span>
+                </h3>
+              </div>
+            </div>
+            <div class="my-16 grid grid-row-4 gap-8 text-sm">
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+            </div>
+            <div class="grid place-content-center">
+              <a href="#contact">
+                <button
+                  class="uppercase tracking-widest font-bold text-white bg-[#313576] py-4 px-8 rounded-md hover:scale-105 transition-all"
+                >
+                  Book a meeting
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-3xl px-12 py-16 grid place-content-center shadow-lg shadow-[#0099ff] max-w-[450px] mx-auto"
+          >
+            <div class="absoulte flex justify-end mt-[-80px]">
+              <span
+                class="text-white tracking-widest text-sm bg-[#313576] py-2 px-4 h-9 w-[106px] uppercase font-bold rounded-full"
+                >popular</span
+              >
+            </div>
+            <div class="text-center text-[#313576]">
+              <h4 class="uppercase font-bold">Single page site</h4>
+              <div>
+                <h3>
+                  <span class="font-bold text-6xl">$1250 </span
+                  ><span>one-time</span>
+                </h3>
+              </div>
+            </div>
+            <div class="my-16 grid grid-row-4 gap-8 text-sm">
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+            </div>
+            <div class="grid place-content-center">
+              <a href="#contact">
+                <button
+                  class="uppercase tracking-widest font-bold text-white bg-[#313576] py-4 px-8 rounded-md hover:scale-105 transition-all"
+                >
+                  Book a meeting
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-3xl px-12 py-16 grid place-content-center shadow-lg shadow-[#0099ff] max-w-[450px] mx-auto col-span-1 lg:col-span-2 xl:col-span-1"
+          >
+            <div class="text-center text-[#313576]">
+              <h4 class="uppercase font-bold">Single page site</h4>
+              <div>
+                <h3>
+                  <span class="font-bold text-6xl">$2000 </span
+                  ><span>one-time</span>
+                </h3>
+              </div>
+            </div>
+            <div class="my-16 grid grid-row-4 gap-8 text-sm">
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+              <div class="flex justify-between gap-8 items-center">
+                <div class="text-xl text-[#313576]">
+                  <i class="fa-solid fa-square-check"></i>
+                </div>
+                <div>
+                  Customized web design solutions that reflect your brand
+                  identity and goals
+                </div>
+              </div>
+            </div>
+            <div class="grid place-content-center">
+              <a href="#contact">
+                <button
+                  class="uppercase tracking-widest font-bold text-white bg-[#313576] py-4 px-8 rounded-md hover:scale-105 transition-all"
+                >
+                  Book a meeting
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="./images/pricing_background_bottom.png"
+            alt=""
+            class="w-full"
+          />
+          <img
+            src="./images//portfolio_background_top.png"
+            alt=""
+            class="w-full absolute z-10 mt-[-18vw]"
+          />
+        </div>
+      </div>
+      <div id="contact" class="bg-[#1f2122]">
+        <div class="py-24 px-8">
+          <div class="text-center">
+            <h3 class="uppercase text-[#0099ff] tracking-widest font-bold">
+              Contact
+            </h3>
+            <h2 class="text-3xl font-bold text-center text-white">
+              Get In Touch
+            </h2>
+            <hr class="border-[#0099ff] border-2 w-20 mt-2 mx-auto" />
+          </div>
+          <div>
+            <div class="max-w-[600px] mx-auto mt-12 pb-16 md:pb-0">
+              <p class="text-white text-center">
+                To get started, please book a meeting with us at your
+                convenience. We will get back to you shortly and hope to have a
+                productive and successful meeting with you.
+              </p>
+            </div>
+            <!-- Calendly inline widget begin -->
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/luka-vilagos/30min?hide_gdpr_banner=1"
+              style="min-width: 320px; height: 700px"
+            ></div>
+            <script
+              type="text/javascript"
+              src="https://assets.calendly.com/assets/external/widget.js"
+              async
+            ></script>
+            <!-- Calendly inline widget end -->
+          </div>
+        </div>
+      </div>
+      <div id="banner" class="bg-[#0099ff]">
+        <div
+          class="flex justify-between items-center w-full lg:flex-row flex-col lg:py-0 pt-16 lg:gap-0 gap-16"
+        >
+          <div class="mx-auto px-8">
+            <h3 class="text-5xl text-white mb-2 font-bold">
+              Pricing that reflects your value. <br />
+              Starting at a
+              <span class="text-[#92ffe5]">$1000.</span>
+            </h3>
+          </div>
+          <img
+            src="./images/banner_image.png"
+            alt="banner_img"
+            class="w-full lg:max-w-[564px]"
+          />
+        </div>
+      </div>
+    </main>
+    <footer class="bg-[#1f2122]">
+      <div class="text-white py-12 flex flex-col gap-12 max-w-[800px] mx-auto">
+        <img
+          src="./images/logo-white.png"
+          alt="logo white"
+          class="mx-auto max-w-[128px]"
+        />
+        <div class="max-w-[600px] mx-auto px-2">
+          <p class="text-center">
+            Elevate your online presence with Web Mountain Studios. Crafting
+            bespoke web solutions for a standout digital experience.
+            Pixel-perfect design meets cutting-edge technology. Redefine your
+            online journey with us
+          </p>
+        </div>
+        <div class="w-full flex px-8 lg:flex-row flex-col gap-8 lg:hidden">
+          <div class="flex justify-center gap-8">
+            <span class="uppercase font-bold">Creating Websites</span>
+            <div class="bg-white h-8 w-[1px]"></div>
+            <span class="uppercase font-bold">Creating Websites</span>
+          </div>
+          <div class="bg-white h-8 w-[1px] lg:block hidden"></div>
+          <div class="flex justify-center gap-8">
+            <span class="uppercase font-bold">Creating Websites</span>
+            <div class="bg-white h-8 w-[1px]"></div>
+            <span class="uppercase font-bold">Creating Websites</span>
+          </div>
+        </div>
+        <div class="w-full justify-between lg:flex hidden">
+          <span class="uppercase font-bold">Creating Websites</span>
+          <div class="bg-white h-8 w-[1px]"></div>
+          <span class="uppercase font-bold">Creating Webshops</span>
+          <div class="bg-white h-8 w-[1px]"></div>
+          <span class="uppercase font-bold">Updating Websites</span>
+          <div class="bg-white h-8 w-[1px]"></div>
+          <span class="uppercase font-bold">Upkeeping Websites</span>
+        </div>
+        <div class="flex justify-center items-center gap-6 text-3xl">
+          <a
+            href="https://www.instagram.com/webmountainstudios/"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-instagram hover:text-[#0099ff] transition-all"
+            ></i>
+          </a>
+          <a href="mailto:lvilagos@student.unipu.hr" target="_blank">
+            <i
+              class="fa-solid fa-envelope hover:text-[#0099ff] transition-all"
+            ></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UC9SqbEo9GU9O9nteNwFIOPA"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-youtube hover:text-[#0099ff] transition-all"
+            ></i>
+          </a>
+        </div>
+      </div>
+      <div class="bg-[#333536] py-8">
+        <p class="text-center text-white">
+          © 2023 WMS. All rights reserved. Designed by Web Mountain Studios
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

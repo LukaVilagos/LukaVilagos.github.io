@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Mountain Studios</title>
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/6c4d820d68.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+  <body class="text-[#1f2122]">
+    <header class="bg-white z-50 relative">
+      <nav class="block lg:hidden max-w-screen-2xl w-full mx-auto z-50">
+        <div class="flex justify-between items-center px-8 py-2">
+          <div class="max-w-16 block sm:hidden">
+            <a href="/"><img src="./images/logo.png" alt="logo" /></a>
+          </div>
+          <div class="max-w-64 hidden sm:block">
+            <a href="/"><img src="./images/logo_side_text.png" alt="logo" /></a>
+          </div>
+          <button
+            id="bars"
+            onclick="toggle()"
+            class="hover:text-[#0099ff] transition-all"
+          >
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <div
+          class="hidden bg-white fixed top-22 w-screen shadow-lg py-8 transition-all"
+          id="nav"
+        >
+          <ul
+            class="flex flex-col items-center gap-8 font-semibold justify-center w-full"
+          >
+            <li>
+              <a
+                href="/#about"
+                class="hover:text-[#0099ff] transition-all"
+                onclick="toggle()"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="/#portfolio"
+                class="hover:text-[#0099ff] transition-all"
+                onclick="toggle()"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="/#services"
+                class="hover:text-[#0099ff] transition-all"
+                onclick="toggle()"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/#pricing"
+                class="hover:text-[#0099ff] transition-all"
+                onclick="toggle()"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="documentation.html"
+                onclick="toggle()"
+                class="hover:text-[#0099ff] transition-all"
+                >Documentation</a
+              >
+            </li>
+            <li>
+              <a href="/#contact" onclick="toggle()">
+                <button
+                  class="bg-[#0099ff] uppercase font-bold rounded-md text-white py-3 px-6 tracking-widest hover:shadow-lg hover:shadow-blue-200 transition-all"
+                >
+                  Contact Us
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav
+        class="justify-between items-center px-8 max-w-screen-2xl w-full mx-auto z-50 hidden lg:flex py-2"
+      >
+        <div class="max-w-64">
+          <a href="/"><img src="./images/logo_side_text.png" alt="logo" /></a>
+        </div>
+        <ul
+          class="lg:flex justify-between items-center gap-8 font-semibold hidden"
+        >
+          <li>
+            <a href="/#about" class="hover:text-[#0099ff] transition-all"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="/#portfolio" class="hover:text-[#0099ff] transition-all"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="/#services" class="hover:text-[#0099ff] transition-all"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="/#pricing" class="hover:text-[#0099ff] transition-all"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="documentation.html"
+              class="hover:text-[#0099ff] transition-all"
+              >Documentation</a
+            >
+          </li>
+          <li>
+            <a href="/#contact">
+              <button
+                class="bg-[#0099ff] uppercase font-bold rounded-md text-white py-3 px-6 tracking-widest hover:shadow-lg hover:shadow-blue-200 transition-all"
+              >
+                Contact Us
+              </button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="bg-slate-200 py-12">
+      <div
+        class="fixed w-screen h-screen bg-[url('./images/liquid-cheese.svg')] bg-cover top-0 z-0"
+      ></div>
+      <button
+        id="scrollButton"
+        class="fixed sm:h-16 sm:w-16 h-12 w-12 rounded-full sm:bottom-10 sm:right-10 bottom-5 right-5 bg-white z-50 hover:text-[#0099ff] hover:scale-110 hover:shadow-lg hover:shadow-[#0099ff] transition-all"
+        onclick="scrollToTop()"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <div
+        class="bg-white mx-auto max-w-[844px] relative z-40 py-32 border-gray-400 border shadow-lg grid place-content-center px-4 text-justify"
+      >
+        <article class="prose mb-16 text-left">
+          <h3>Autor: Luka Vilagoš</h3>
+          <h1>Projektni zadatak - Web Mountain Studios</h1>
+          <ul>
+            <li><a href="#uvod">Uvod</a></li>
+            <li><a href="#grafika">Grafika - Logotip</a></li>
+            <li><a href="#zvuk">Zvuk - Radio Reklama</a></li>
+            <li><a href="#video">Video - Izrada Dizajna</a></li>
+            <li><a href="#slika">Slika - Mockup</a></li>
+            <li><a href="#tekst">Tekst - Reklama</a></li>
+          </ul>
+          <hr class="w-full" />
+        </article>
+        <article class="prose mb-16" id="uvod">
+          <h2>Uvod</h2>
+          <p>
+            Tema projektnog zadataka je zamišljena agencija za izradu web
+            stranica po imenu Web Mountain Studios. Kroz projektni zadatak bit
+            će objašnjen postupak u detalju kako su pojedini elementi stranice
+            izrađeni pomoću besplatnih javno dostupnih alata. Projektni zadatak
+            je podijeljen u 5 poglavlja sa naslovima: Grafika, Zvuk, Video,
+            Slika, Tekst. U svakom od poglavlja bit će opisan proces izrade
+            pojedinog elementa popraćen vizualnim pomagalima. Svrha svakog od
+            poglavlja je educirati čitatelja kako samostalno postići sličan
+            rezultat te dokazati validnost rada i kvalitetu autorovog znanja.
+          </p>
+          <p>
+            Sama web stranica i dokumentacija je napravljena koristeći HTML, CSS
+            i Javascript programske jezike te hostana na besplatnoj usluzi po
+            nazivu infinityfree
+            <a href="https://www.infinityfree.com/" target="_blank"
+              >(https://www.infinityfree.com/)</a
+            >. Za izgled stranice koristi se javna CSS biblioteka Tailwind CSS
+            <a href="https://tailwindcss.com/" target="_blank"
+              >(https://tailwindcss.com/)</a
+            >
+          </p>
+          <hr class="w-full" />
+        </article>
+        <article class="prose mb-16" id="grafika">
+          <h2>Grafika - Logotip za tvrtku</h2>
+          <p>
+            Za početak potrebno je osmisliti vizualni identitet počevši sa
+            logotipom. Za izradu logotipa koristit će se besplatni alat za
+            izradu vektorske grafike Inkscape
+            <a href="https://inkscape.org/" target="_blank"
+              >(https://inkscape.org/)</a
+            >. Prvo je potrebno osmisliti ideju i ime tvrtke pri čemu je bitno
+            paziti na originalnost kako ime ne bi bilo previše slično ili isto
+            neke druge kompanije. Odabrano je ime Web Mountain Studios zbog
+            originalnosti, povezanosti sa konceptom interneta, to jest weba, i
+            zbog dostupnosti domene s tim imenom.
+          </p>
+          <p>
+            Koncept logotipa je planina te će logotip se sastojati od
+            apstraktnog prikaza planine i imena tvrtke. Konačni izgled može se
+            vidjeti u slici priloženoj ispod.
+          </p>
+          <img
+            src="./images/logo_side_text.png"
+            alt="logo"
+            class="mx-auto mt-12"
+          />
+          <small class="text-center block">(Web Mountain Studios logo)</small>
+          <p>Za crtanje planine koristit će se dva alata u inkscape-u:</p>
+          <ul>
+            <li>alat za pisaljku</li>
+            <li>alat za oblik</li>
+          </ul>
+          <img
+            src="./images/inkscape_alati.png"
+            alt="inkscape image 1"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(inkscape alati)</small>
+          <p>
+            Okrugli obrub je nacrtan pomoću alata za izradu oblika a planina
+            unutra pomoću alata za pisaljku. Kako bi se postigao željeni efekt
+            koji daje dojam da su određeni oblici izrezani iz planine koristi se
+            alat razlika iz izbornika Staza.
+          </p>
+          <img
+            src="./images/inkscape_izbornik.png"
+            alt="inkscape image 2"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(inkscape izbornik)</small>
+          <p>
+            Za vrijeme crtanja oblika, boje i ostali elementi pisaljke i oblika
+            može se podesiti na izborniku s desne strane ekrana. Naime taj
+            izbornik može sadržavati sve potrebne podizbornike za uređivanje
+            elemenata grafike. Osim podizbornika za boju može sadržavati i
+            podizbornik za uređivanje teksta i biranje fonta. Taj podizbornik je
+            potreban za uređivanje imena tvrtke u logotipu.
+          </p>
+          <img
+            src="./images/inkscape_podizbornik.png"
+            alt="inkscape image 3"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(inkscape podizbornici)</small>
+          <p>
+            Primjenom ovih alata inkscape-a postigne se željeni rezultat i
+            logotip za agenciju Web Mountain Studios. Nakon finalnog dizajna on
+            se mora izvesti i spremiti u PNG formatu. To se postiže pomoću
+            izbornika za izvezivanje.
+          </p>
+          <hr class="w-full" />
+        </article>
+        <article class="prose mb-16" id="zvuk">
+          <h2>Zvuk - Radio Reklama</h2>
+          <p>
+            Pomoću javno dostupnog alata za obradu zvuka Audcatiy (<a
+              href="https://www.audacityteam.org/"
+              target="_blank"
+              >https://www.audacityteam.org/</a
+            >). Ideja koja će biti realizirana je radio reklama za prije
+            spomenutu agenciju Web Mountain Studios. Za početak potrebno je
+            dobiti snimku smišljenog teksta. Umjesto snimanja zvuka samostalno,
+            moguće je koristiti jedan od novih, besplatnih alata koji koriste
+            umjetnu inteligenciju, npr. ElevenLabs (<a
+              href="https://elevenlabs.io/"
+              target="_blank"
+              >https://elevenlabs.io/</a
+            >). Sučelje ovog alata je vidljiv u slici ispod.
+          </p>
+          <img
+            src="./images/ElevenLabs - sučelje.png"
+            alt="ElvenLabs - sučelje"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(ElevenLabs - sučelje)</small>
+          <p>
+            Nakon što je tekst ubačen u alat, audio datoteka može biti preuzeta
+            kako bi se uvezla u Audacity. Osim samog teksta potrebni su još i
+            pozadinska glazba te određeni zvučni efekti koji će poboljšati
+            reklamu. Stranicu za preuzimanje ovih zvučnih datoteka koja se može
+            koristiti je Pixabay (<a href="https://pixabay.com/" target="_blank"
+              >https://pixabay.com/</a
+            >), zbog toga što ona sadrži slike, i zvukove otvorene licence, što
+            znači da se slobodnu smiju koristiti u svrhu ovog projekta. Pjesma
+            koja će se koristiti se zove Rise Above zbog svoje napetosti, a
+            zvučni efekat koji se zove Massive Thump koji će pomoći sa dodatnim
+            naglašavanjem određenih trenutaka. Sve audio datoteke koje su
+            preuzete su tipa .mp3 i trebaju biti uvezene u Audacity pomoću Uvezi
+            alata.
+          </p>
+          <img
+            src="./images/Audacity - uvezi.png"
+            alt="Audacity - Uvoz"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Audacity - Uvoz)</small>
+          <p>
+            Nakon što su sve datoteke uvezene, Audacity bi trebao ličiti kao na
+            slici vidljivoj ispod
+          </p>
+          <img
+            src="./images/Audacity - sučelje.png"
+            alt="Audacity - sučelje"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Audacity - sučelje)</small>
+          <p>
+            Prvo je potrebno skratiti glazbu na duljinu par sekundi dulju neko
+            audio glasa te na taj, višak, dodati učinak Studio Fade Out tako da
+            se taj dio označi i u izborniku za učinke odabere podizbornik fading
+            te opcija Studio Fade Out. Osim toga zvučni efekt je potrebno
+            kopirati i zalijepiti na prikladna mjesta u audio traci. Mjesta koja
+            su odabrana su na početku glasnijeg dijela pjesme i na zadnjem
+            izgovoru imena tvrtke kako bi se dodao dodatni naglasak na naziv
+            agencije.
+          </p>
+          <p>
+            Za sami kraj potrebno je utišati glazbu kako bi se glas kvalitetno
+            čuo na -21,00 dB pomoću alata lijevo od audio trake pjesme. Nakon
+            toga, pritiskom na opciju Export Audio u izborniku „Datoteka“,
+            moguće je izvesti cijelu audio traku u .mp3 formatu. Taj format je
+            izabran zato što će reklama biti pohranjena na webu gdje je
+            prostorna efikasnost bitna, čak i bitnija nego kvaliteta.
+          </p>
+          <p>
+            Gotova reklama je dostupna na
+            <a
+              href="https://soundcloud.com/luka-vilago-412475112/web-mountain-studios-reklama?si=9b23431ca0c047aba84857c84452ee3a&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+              target="_blank"
+              >ovom linku</a
+            >.
+          </p>
+          <hr class="w-full" />
+        </article>
+        <article class="prose mb-16" id="video">
+          <h2>Video – Izrada Dizajna</h2>
+          <p>
+            Ideja videa je kratak prikaz procesa izrade jednog dizajna web
+            stranice. Alat koji će se koristiti je DaVinci Resolve zbog svojih
+            mogućnosti na razini profesionalnog softvera koji se koristi u
+            industriji i primamljive cijene od 0€ (<a
+              href="https://www.blackmagicdesign.com/products/davinciresolve"
+              target="_blank"
+              >https://www.blackmagicdesign.com/products/davinciresolve</a
+            >). Prvo je potrebno snimiti dva videa istovremeno. Naime, pomoću
+            alata za snimanje ekrana OBS (<a
+              href="https://obsproject.com/"
+              target="_blank"
+              >https://obsproject.com/</a
+            >) čije sučelje (kada se postavi na način za snimanje), izgleda kao
+            na slici ispod.
+          </p>
+          <img
+            src="./images/OBS_sučelje.png"
+            alt="OBS - sučelje"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(OBS - sučelje)</small>
+          <p>
+            Pomoću izbornika Scene i Izvori podesi se da OBS snima zaslon ekrana
+            na kojem se stvara dizajn. Istovremeno druga osoba, sa kamerom ili u
+            ovom slučaju mobitelom snima osobu koja izrađuje dizajn. Na mobitelu
+            se upali aplikacije kamere i kontinuirano snima kako bi osoba koja
+            uređuje video imala što više mogućnosti i kadrova koje može
+            iskoristiti. Nakon što su snimke snimljene u svrhu izrade
+            videozapisa bit će potrebni još 4 stvari:
+          </p>
+          <ul>
+            <li>Stock video planina</li>
+            <li>Logo agencije</li>
+            <li>Završeni dizajn</li>
+            <li>Pozadinska glazba</li>
+          </ul>
+          <p>
+            Stock video planina, kao i pozadinska glazba je moguće preuzeti
+            preko stranice Pixabay (<a
+              href="https://pixabay.com/"
+              target="_blank"
+              >https://pixabay.com/</a
+            >). Nakon što su svi elementi spremni i novi projekt u DaVinci
+            Resolvu započet, ekran bi trebao izgledati kao što je vidljivo na
+            slici ispod.
+          </p>
+          <img
+            src="./images/DaVinci_sučelje.png"
+            alt="DaVinci Reslove - sučelje"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(DaVinci Reslove - sučelje)</small>
+          <p>
+            Desnim klikom na „media pool“ moguće je unijeti medijske elemente
+            koji će se koristiti. Nakon toga potrebno ih je postaviti u video
+            traku koje sa nalazi ispod jedno ispod drugog. Dodatni slojevi u
+            video traci se dodaju desnim klikom pa izbor „Add Track“. Nakon toga
+            sve izmjene će se uređivati u „Edit“ načinu rada. U ovom načinu
+            editor ima više mogućnosti uređivanja medija. Prvobitno je potrebno
+            isključiti sav zvuk osim odabrane glazbe. To se postiže, kao i
+            brisanje bilo kojeg dijela videa i sl. radnji, odabirom zvučne trake
+            i pritiskom tipki Ctrl + X (Cut). Za skraćivanje videa i zadržavanja
+            samo najbitnijih dijelove koristi se Cut alat. U slici ispod je
+            vidljiv završni „timeline“ videa.
+          </p>
+          <img
+            src="./images/DaVinci_timeline.png"
+            alt="DaVinci Reslove - Timeline"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(DaVinci Reslove - Timeline)</small>
+          <p>
+            Osim što su dva snimljena vide izrezani, na početak videa je dodan
+            stock video planine i s logom agencije postavljen preko. Na video i
+            sliku su dodani Fade Out i Fade In efekti. Oni se dodaju povlačenjem
+            iz gornjih vrhova medija koji su odabrani. Osim toga dodana su dva
+            prijelaza iz Toolbox izbornika. U njemu se može pronaći popis
+            prijelaza koji se mišem samo povuku i stave na prijelaz između dva
+            videa. Jedini efekt koji treba dodati je zumiranje i pomicanje
+            lijevo prema desno. Naime, pritiskom na video traku u gornjem desnom
+            dijelu ekrana prikazati će se izbornik gdje se mogu podesiti
+            pozicija i zumiranje video trake mijenjanjem vrijednosti pored
+            naziva atributa videa.
+          </p>
+          <img
+            src="./images/DaVinci_transform.png"
+            alt="DaVinci Reslove - Transform"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(DaVinci Reslove - Transform)</small>
+          <p>
+            Pomicanje od lijevo prema desno se postigne pritiskom na dijamant s
+            desne strane. To će postaviti vrijednosti tih atributa u tom
+            trenutku u videu. Da bi se video pomicao, na kraju videa potrebno je
+            postaviti druge vrijednosti i opet pritisnuti dijamant, što
+            postavlja „keyframe“, te će video automatski postepeno prelaziti
+            između te dvije vrijednosti.
+          </p>
+          <p>
+            Za kraj potrebno se prebaciti u „Deliver“ način rada. Pošto će video
+            biti objavljen na youtube u render settings potrebno je odabrati
+            opciju YouTube 1080p te pritisnuti gumb Add to Render Queue nakon
+            odabira lokacije gdje će se video spremiti i naslova videa. Nakon
+            toga pritiskom na gumb Render All video će se izvesti i spreman je
+            za objavu na YouTube. Video se može pogeldati na ovom linku:
+            <a
+              href="https://www.youtube.com/watch?v=APOssn6G7JI "
+              target="_blank"
+              >https://www.youtube.com/watch?v=APOssn6G7JI</a
+            >
+          </p>
+          <hr class="w-full" />
+        </article>
+        <article class="prose mb-16" id="slika">
+          <h2>Slika - Mockup</h2>
+          <p>
+            Pomoću besplatnog alata za izradu dizajna i kolaborativan rad Figma
+            <a href="https://www.figma.com/">(https://www.figma.com/)</a> u
+            svrhu zadatka izrađeno je 4 dizajna (Mockupa) za web stranice. U
+            svrhu dokumentacije projektnog zadatka bit će dokumentirana izrada
+            jednog od njih. Ostali dizajni mogu se vidjeti na sljedećoj
+            poveznici <a href="/#portfolio">(portfolio)</a>, a dizajn koji će
+            biti dokumentiran je vidljiv ispod.
+          </p>
+          <img
+            src="./images/Dark Website.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Figma - mockup)</small>
+          <p>
+            Ideja stranice je tvrtka za osobne trenere. Kako bi lakše mogli
+            dizajnirati stranicu treba ju prvo razdvojiti na više jednostavnijih
+            dijelova. Elementi ovog dizajna su sljedeći (od gore prema dolje):
+          </p>
+          <ul>
+            <li>navigacija</li>
+            <li>glavni naslov s pozadinskom slikom</li>
+            <li>dodatni detalji</li>
+            <li>poveznice na društvene mreže</li>
+            <li>autorska prava / licenca</li>
+          </ul>
+          <p>
+            U slici ispod se može vidjeti glavna alatna traka Figme. Svaki alat
+            je vrlo jednostavan no moćan i nakon dubljeg upoznavanja omogućavaju
+            izradu profesionalnih dizajnova. Za stvaranje dizajna prvo je
+            potrebno odabrati alat za stvaranje okvira i stvoriti okvir veličine
+            1440px puta 1040 px kao standardna veličina desktop ekrana. Svi
+            elementi će biti postavljeni na taj okvir.
+          </p>
+          <img
+            src="./images/figma_izbornik.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Figma - alati)</small>
+          <p>
+            Navigacija se sastoji od 3 dijela. Prvi dio, logo koji je poravnat
+            lijevo prema web dizajn standardima, je namijenjen da se zamjeni sa
+            aktualnim logom tvrtke koja izabere ovaj dizajn za njihovu stranicu
+            te je na njegovo mjesto stavljen jednostavan dizajn. Logo se sastoji
+            od dvije riječi različitih težina i jednostavnog oblika kao akcenat.
+            U Figmi ovaj dizajn se može postići na sljedeći način. Pomoću alata
+            za tekst stvoriti tekstni okvir i popuniti ga željenim riječima.
+            Riječi se mogu urediti pomoću izbornika vidljivog ispod.
+          </p>
+          <img
+            src="./images/figma_tekst.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Figma - tekst)</small>
+          <p>
+            Tu se može postaviti željeni font (Roboto) i njegovu veličinu, te
+            ostali aspekti poput razmaka slova i njihova debljina. Nakon toga se
+            treba dodati crveni krug pomoću alata za oblike. Kako bi se postigla
+            rupa u krugu treba dodati još jedan oblik, pravokutnik, i napraviti
+            oduzimanje ta dva oblika pomoću izbornika vidljivog ispod.
+          </p>
+          <img
+            src="./images/figma_subtrakcija.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Figma - subtrakcija)</small>
+          <p>
+            Središnju navigaciju je moguće postići pomoću alata za tekst, a gumb
+            za kontakt pomoću alata za tekst i oblike. Strjelica pored riječi
+            može se postići na dva različita načina. Ili kombinacijom linija
+            pomoću alata za oblike ili pomoću ikone preuzete iz plugina
+            Iconduck. Iz tog plugina mogu se pronaći i ikone za društvene mreže.
+          </p>
+          <img
+            src="./images/figma_ikone.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Figma - ikone)</small>
+          <p>
+            Ostali elementi dizajna se postižu na slične načine kombinacijom
+            teksta i oblika. Jedini element koji je preostao za objasniti je
+            pozadinska slika. Samu slika se pronađe preko stranice za slike
+            javne licence
+            <a href="https://pixabay.com/">(https://pixabay.com/)</a> . Nakon
+            toga sliku je potrebno urediti pomoću izbornika vidljivog ispod.
+          </p>
+          <img
+            src="./images/figma_slika.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Figma - slika)</small>
+          <p>
+            Osim mijenjanja saturacije slike potrebno je dodati dva sloja iznad
+            kako bi se postigao željeni efekt. Prvi sloj je okrugli prijelaz iz
+            potpuno prozirnog u potpuno crnog a drugi sloj je crna boja
+            smanjenje vidljivosti kako bi zatamnjeli sliku. Prijelazi i boje se
+            mogu uređivati u izborniku vidljivom ispod.
+          </p>
+          <img
+            src="./images/figma_prijelaz.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Figma - prijelaz)</small>
+          <p>
+            S ovim znanjem osoba je spremna izraditi sve elemente dizajna i
+            posložiti ih prema priloženoj slici. Time će postići moderan i
+            atraktivan dizajn spreman za profesionalnu potrebu.
+          </p>
+          <hr class="w-full" />
+        </article>
+        <article class="prose mb-16" id="tekst">
+          <h2>Tekst - Reklama</h2>
+          <p>
+            Pomoću softvera za izradu profesionalnih dokumenata poput brošura,
+            knjiga ili u ovom slučaju članka u novinama Scribus napravljen je
+            članak o agenciji Web Mountain Studios s ciljem promocije. Scribus
+            <a href="http://www.scribus.us/">(http://www.scribus.us/)</a> je
+            softver otvorenog za stolno izdavaštvo i, iako je poprilično star
+            alat, sadrži različite alate koji omogućuju izradu članka
+            profesionalne kvalitete.
+          </p>
+          <img
+            src="./images/novine-stranica001.webp"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block"
+            >(Web Mountain Studios - reklama za novine)</small
+          >
+          <p>
+            Prvo je potrebno stvoriti novu datoteku te na praznoj stranici
+            označiti okvire teksta i slika na stranici.
+          </p>
+          <img
+            src="./images/scribus_okviri.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Scribus - okviri)</small>
+          <p>
+            Nakon postizanja željenog rasporeda može se započeti sa ubacivanjem
+            i oblikovanjem sadržaja. Prvo je potrebno popuniti tekst sa
+            tekstualnim primjerom pomoću desnog klika na tekstualni okvir i
+            otvaranja izbornika za tekstualne primjere. Tu je moguće odabrati
+            jezik teksta kojim će tekstualni okvir biti popunjen. Nakon toga,
+            potrebno je podesiti font te njegovu veličinu. To je moguće pomoću
+            izbornika Uređivač teksta.
+          </p>
+          <img
+            src="./images/scribus_uredivac_teksta.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Scribus - uređivač teksta)</small>
+          <p>
+            U tom izborniku može se mijenjati tekst te mijenjati svojstva teksta
+            to jest fonta. Font koji će se koristiti u ovom zadatku se zove
+            „U001“. Odabran je zbog svog minimalističkog modernog dizajna te
+            lake čitljivosti. Nakon toga potrebno je podesiti veličinu fonta.
+            Paragrafi teksta imaju veličinu fonta 10 pt te naslov ima veličinu
+            fonta 40 pt. Poravnanje paragrafa je obostrano, a poravnanje naslova
+            je centrirano. Nakon što je dizajn finaliziran moguće je ubaciti
+            sami sadržaj. (Za sadržaj pretpostavka je da su slike i tekst
+            pripremljeni od prije).
+          </p>
+          <p>
+            Slike je potrebno prilagoditi okviru pomoću desnog klika jer često
+            odabrane slike neće biti savršenih dimenzija odabranih okvira. Nakon
+            ubačenog sadržaja vrijeme je za završne detalje. Određene dijelove
+            teksta te naslov je potrebno podebljati odabirom „Bold“ verzije
+            fonta te dodati pozadinsku sliku tako da se postavi okvir slike
+            preko cijele stranice i poslati ga na dno pomoću izbornika vidljivog
+            ispod. Napokon, članak je finaliziran i spreman za objavu.
+          </p>
+          <img
+            src="./images/scribus_dno.png"
+            alt="logo"
+            class="mx-auto mt-12 rounded-md"
+          />
+          <small class="text-center block">(Scribus - razina)</small>
+          <hr class="w-full" />
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
